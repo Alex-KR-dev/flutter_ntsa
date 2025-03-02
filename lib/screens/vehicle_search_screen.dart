@@ -2,11 +2,13 @@
 import 'package:flutter/material.dart';
 
 class VehicleSearchScreen extends StatefulWidget {
+  const VehicleSearchScreen({super.key});
+
   @override
-  _VehicleSearchScreenState createState() => _VehicleSearchScreenState();
+  VehicleSearchScreenState createState() => VehicleSearchScreenState();
 }
 
-class _VehicleSearchScreenState extends State<VehicleSearchScreen> {
+class VehicleSearchScreenState extends State<VehicleSearchScreen> {
   final TextEditingController _controller = TextEditingController();
   String? vehicleInfo;
 

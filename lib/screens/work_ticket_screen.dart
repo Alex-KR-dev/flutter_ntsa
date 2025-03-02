@@ -2,11 +2,13 @@
 import 'package:flutter/material.dart';
 
 class WorkTicketScreen extends StatefulWidget {
+  const WorkTicketScreen({super.key});
+
   @override
-  _WorkTicketScreenState createState() => _WorkTicketScreenState();
+  WorkTicketScreenState createState() => WorkTicketScreenState();
 }
 
-class _WorkTicketScreenState extends State<WorkTicketScreen> {
+class WorkTicketScreenState extends State<WorkTicketScreen> {
   final TextEditingController _ticketController = TextEditingController();
   Map<String, String>? ticketData;
   bool isLoading = false;

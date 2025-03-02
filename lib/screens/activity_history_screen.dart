@@ -2,7 +2,9 @@
 import 'package:flutter/material.dart';
 
 class ActivityHistoryScreen extends StatelessWidget {
-  final List<Map<String, String>> activities = [
+  const ActivityHistoryScreen({super.key});
+
+  static final List<Map<String, String>> activities = [
     {
       "Action": "Vehicle Search",
       "Details": "Searched vehicle GKB 956Z",

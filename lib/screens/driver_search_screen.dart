@@ -2,11 +2,13 @@
 import 'package:flutter/material.dart';
 
 class DriverSearchScreen extends StatefulWidget {
+  const DriverSearchScreen({super.key});
+
   @override
-  _DriverSearchScreenState createState() => _DriverSearchScreenState();
+  DriverSearchScreenState createState() => DriverSearchScreenState();
 }
 
-class _DriverSearchScreenState extends State<DriverSearchScreen> {
+class DriverSearchScreenState extends State<DriverSearchScreen> {
   final TextEditingController _driverIdController = TextEditingController();
   Map<String, String>? driverData;
   bool isLoading = false;
