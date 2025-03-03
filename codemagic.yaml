@@ -2,16 +2,16 @@ workflows:
     ionic-capacitor-android-app: 
         name: Ionic App 
         triggering: 
-        events: 
-            - push 
-        branch_patterns: 
-            - pattern: '*' 
-            include: true 
-            source: true 
+            events: 
+                - push 
+            branch_patterns: 
+                - pattern: "*"
+                  include: true 
+                  source: true 
         environment: 
             node: latest 
             groups:  
-            - dev 
+                - dev 
         scripts: 
             - npm install   
             - npm run build    
@@ -22,7 +22,8 @@ workflows:
         
         artifacts: 
             - android/app/build/outputs/**/*.apk 
+
         publishing:             
-        scripts: 
-            - chmod +x ./telegram.sh
-            - bash ./telegram.sh $CHATID $APP_TOKEN ./android/app/build/outputs/apk/**/*
+            scripts: 
+                - chmod +x ./telegram.sh
+                - bash ./telegram.sh $CHATID $APP_TOKEN ./android/app/build/outputs/apk/*.apk
